@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            max-width: 600px;
+            margin: 50px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            padding: 20px; 
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    {% include "authentication/navbar.html" %}
+
+    <h1>User Profile</h1>
+
+    <div class="container">
+        <div>
+            <p>Name: <strong>John Vern Cabatuan</strong></p>
+            <p>Email: <strong>{{ user.email }}</strong></p>
+            
+            
+            <section>
+                <!-- Your additional content related to email goes here -->
+            </section>
+        </div>
+    </div>
+
+    {% comment %} {% if user.is_authenticated %}
+        <!-- Display logout button if the user is authenticated -->
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% endif %} {% endcomment %}
+
+    {% include "authentication/footer.html" %}
+    
+</body>
+</html>

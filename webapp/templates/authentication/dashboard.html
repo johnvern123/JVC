@@ -1,0 +1,76 @@
+{% load static %}
+
+<title>Dashboard</title>
+<link rel="stylesheet" href="{% static '/css/dashboard.css' %}">
+<link rel="icon" type="images/x-icon" href="{% static '' %}">
+
+
+{% include "authentication/navbar.html" %}
+
+
+<div class="carousel">
+    <div class="image-container">
+        <img src="{% static 'images/carousel_img1.jpg' %}" alt="Image 1">
+    </div>
+    <div class="image-container">
+        <img src="{% static 'images/carousel_img2.jpg' %}" alt="Image 2">
+    </div>
+    <div class="image-container">
+        <img src="{% static 'images/carousel_img3.jpg' %}" alt="Image 3">
+    </div>
+    <!-- Add more images as needed -->
+</div>
+
+
+<div>
+    <div id="online-library-container">
+        <h1>ONLINE LIBRARY</h1>
+    </div>
+
+    <div class="container-body">
+        <div class="corner"></div>
+        <a href="" class="clickable1">Activity</a>
+        <a href="" class="clickable2" style="left: 100px;">Post</a>
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".image-container");
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.classList.remove("hide");
+                } else {
+                    image.classList.add("hide");
+                }
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 3000); // Change image every 3 seconds (adjust as needed)
+
+        // Optionally, you can add next/prev buttons for manual control
+        // document.getElementById("nextBtn").addEventListener("click", nextImage);
+        // document.getElementById("prevBtn").addEventListener("click", prevImage);
+    });
+</script>
+
+
+<br>
+<br>
+{% include "authentication/footer.html" %}
+
+

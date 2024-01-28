@@ -1,0 +1,37 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+
+
+<div class="header">
+    <div class="logo-placeholder">
+        <img src="{% static 'images/navbar logo.png' %}" width="400px" height="80px" alt="Your Logo">
+    </div>
+    <div class="profile">
+        <img src="{% static 'images/user.png' %}" alt="Profile Image" width="50" height="50">
+
+        {% if user.is_authenticated %}
+        <a href="{% url 'profile' %}">Profile</a>
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'register-student' %}">Register</a>
+        {% endif %}
+    </div>
+</div>
+
+<nav>
+    <a href="{% url 'favbook.html' %}">Home</a>
+    <a href="{% url 'dashboard.html' %}">Dashboard</a>
+    <a href="{% url 'about.html' %}">About</a>
+    <div class="dropdown">
+        <a href="{% url 'homepage' %}">Catalog</a>
+        <div class="dropdown-content">
+            <a href="{% url 'favbook.html' %}">E-Library</a>
+            <a href="#">E-Books</a>
+            <a href="#">E-Journal</a>
+        </div>
+    </div>
+    <a href="{% url 'personnel.html' %}">Library Personnel</a>
+</nav>
+  

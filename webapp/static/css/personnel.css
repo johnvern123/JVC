@@ -1,0 +1,41 @@
+.personnel-1 {
+    margin: 15px;
+    border: 2px solid #ccc;
+    width: 300px;
+    float: left;
+    margin-left: 500px;
+  }
+  
+  .personnel-2 {
+    margin: 15px;
+    border: 2px solid #ccc;
+    width: 300px;
+    margin-top: 35px;
+    margin-left: 900px;
+  }
+
+.personnel img {
+    width: 100%;
+    height: auto;
+    
+
+  }
+  
+.desc {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+.desc1 {
+          padding: 15px;
+          font-size: 20px;
+          text-align: center;
+  }
+
+  h1 {
+      text-align: center;
+      padding: 20px;
+      
+     
+  }

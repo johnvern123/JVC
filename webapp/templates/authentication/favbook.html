@@ -1,0 +1,42 @@
+{% load static %}
+
+{% include "authentication/navbar.html" %}
+
+<html>
+<head>
+<title>Books</title>
+<link rel="stylesheet" href="{% static '/css/favbook.css' %}">.
+</head>
+<body>
+    <section>
+    <header>
+        
+        
+    </header>
+<table div class="t">
+  <tr>
+    <td><a href="{% url 'description1.html' %}"><img src="{% static 'images/books/book_1.jpg' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'description2.html' %}"><img src="{% static 'images/books/book_2.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'description3.html' %}"><img src="{% static 'images/books/book_3.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'description4.html' %}"><img src="{% static 'images/books/book_4.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'description5.html' %}"><img src="{% static 'images/books/book_5.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+  </tr>
+  <tr>
+    <td><a href="{% url 'description6.html' %}"><img src="{% static 'images/books/book_6.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'about.html' %}"><img src="{% static 'images/sample.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'about.html' %}"><img src="{% static 'images/sample.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'about.html' %}"><img src="{% static 'images/sample.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+    <td><a href="{% url 'about.html' %}"><img src="{% static 'images/sample.png' %}" alt="" border=3 height=400 width=250></img></a></th>
+  </tr>
+  
+  </table>
+</section>
+<script type="text/javascript">
+    function imageClick(url) {
+    window.location = url;
+}
+</script>
+
+
+</body>
+<html>

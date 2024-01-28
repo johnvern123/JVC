@@ -1,0 +1,36 @@
+{% load static %}
+
+{% include "authentication/navbar.html" %}
+
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title>E-Book</title>
+    <link rel="stylesheet" href="{% static '/css/description.css' %}">
+</head>
+
+
+
+
+<body>
+    <section>
+        <div class="content">
+            <div class="imgBox">
+                <img src="{% static 'images/books/book_1.jpg' %}" class="book">
+            </div> 
+
+            <div class="textbox">
+                <h2><strong>Agile processes in software engineering and extreme programming: 20th International Conference, XP 2019, Montréal, QC, Canada, May 21-25, 2019, Proceedings</strong></h2>
+                <p>This open access book constitutes the proceedings of the 20th International Conference on Agile Software Development, XP 2019, held in Montreal, QC, Canada, in May 2019. XP is the premier agile software development conference combining research and practice. It is a hybrid forum where agile researchers, academics, practitioners, thought leaders, coaches, and trainers get together to present and discuss their most recent innovations, research results, experiences, concerns, challenges, and trends. Following this history, for both researchers and seasoned practitioners XP 2019 provided an informal environment to network, share, and discover trends in Agile for the next 20 years The 15 full papers presented in this volume were carefully reviewed and selected from 45 submissions. They were organized in topical sections named: agile adoption, agile practices; large-scale agile; agility beyond IT, and the future of agile.</p>
+                <button class="fave" onclick="Addedfav()">Add to favorites</button>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        function Addedfav() {
+        swal('Added to favorites!');
+      }
+    </script>
+</body>
+</html>

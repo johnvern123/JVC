@@ -1,0 +1,72 @@
+{% load static %}
+
+<title>CVSU BACOOR ILS</title>
+<link rel="stylesheet" href="{% static '/css/about.css' %}">
+<link rel="icon" type="images/x-icon" href="{% static '' %}">   
+
+{% include "authentication/navbar.html" %}
+
+
+<div class="h2-body">
+  <h2>CAVITE STATE UNIVERSITY- BACOOR CITY CAMPUS LIBRARY </h2>
+</div>
+
+<div class="h3-body" style="display: inline-flex; margin: 50px 300px;">
+  <h3 style="margin: 0px 30px;"><a href="https://www.google.com/maps/place/Cavite+State+University+-+Bacoor+Campus/@14.412771,120.981349,185m/data=!3m1!1e3!4m6!3m5!1s0x3397d22f4810979f:0xaf0dae4457b7d498!8m2!3d14.4127705!4d120.9813495!16s%2Fg%2F11cjm9nmwv?hl=en-US&entry=ttu" target="_blank">CX7+4G5,SAMPAGUITA,BACOOR,CAVITE,PHILIPPINES</a></h3>
+  <h3 style="margin: 0px 30px;"><a href="https://web.facebook.com/CvSUBacoorCityCampus" target="_blank">CAVITE STATE UNIVERSITY-BACOOR CAMPUS</a></h3>
+</div>
+
+<!-- Embedding the map -->
+<div style="width: 100%; height: 500px; margin-top: 20px;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.274068510187!2d120.97916021482778!3d14.412884489894444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d22f4810979f%3A0xaf0dae4457b7d498!2sCavite%20State%20University%20-%20Bacoor%20Campus!5e0!3m2!1sen!2sph!4v1643174920426!5m2!1sen!2sph" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<div class="h1-body">
+  <h1>OVERVIEW OF THE CAMPUS LIBRARY</h1>
+</div>
+<div class="img" style="display: inline-flex; margin-left: 50px;">
+  <img src="{% static 'images/img2.jpg' %}" alt="p1" width="400" height="350">
+  <img src="{% static 'images/img3.jpg' %}" alt="p1" width="400" height="350">
+  <img src="{% static 'images/img4.jpg' %}" alt="p1" width="400" height="350">
+  <img src="{% static 'images/img5.jpg' %}" alt="p1" width="400" height="350">
+</div>
+<div class="p-body">
+  <p>
+  The Bacoor Cavite City Campus Library is located at the Second Floor of the Cavite State University-Bacoor City Campus,
+    <br> Phase 2, Soldiers Hills IV, Molino VI, Bacoor City, Cavite</br>   
+  </p>
+</div>
+
+<div class="h1-body">
+<h1>CAMPUS LIBRARY VISION</h1>
+</div>
+
+<div class="p-body">
+<p>
+    "To promote the humble existence and importance of library in an institution and to its community
+    through quality education where can develop and produce morally upright and competitive individuals"
+</p>
+</div>
+
+<div class="h1-body">
+<h1>CAMPUS LIBRARY MISSION</h1>
+</div>
+
+<div class="p-body">
+<p>
+  "To support the institution's mission in its commitment that can produce individuals with truth, excellence,
+  and service in any phases and trends of life."
+</p>
+</div>
+
+<div class="h1-body">
+<h1>CAMPUS LIBRARY GOALS</h1>
+</div>
+
+<div class="p-body">
+<p>1. To provide a conducive place where clientele can stay and study quietly;</p>
+<p> 2. To respond to the student's multiple academic needs;</p>
+</div>
+
+
+{% include "authentication/footer.html" %}
